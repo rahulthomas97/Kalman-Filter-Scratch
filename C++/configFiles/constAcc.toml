@@ -1,0 +1,48 @@
+# System parameters
+dt = 0.1  # Time step in seconds
+
+# State Transition Matrix (A)
+# 2 states: [position, velocity]
+A = [
+    [1.0, 0.1],
+    [0.0, 1.0]
+]
+
+# Control Input Matrix (B)
+# Assuming control input represents acceleration
+B = [
+    [0.005],
+    [0.1]
+]
+
+# Control input (u)
+# Acceleration input
+u = [1.0]  # 'a' will be defined during runtime
+
+# Measurement Matrix (C)
+# We measure position only
+C = [
+    [1.0, 0.0]  # Measure position
+]
+
+# Process Noise Covariance (Q)
+# Adjust values based on expected process noise characteristics
+Q = [
+    [1.5625e-06, 3.125e-05],
+    [3.125e-05, 0.000625]
+]
+
+# Measurement Noise Covariance (R)
+# Adjust values based on sensor characteristics
+R = [
+    [4.0]
+]
+
+# Initial State Estimate
+init_estimate = [0.0, 0.0]  # [position, velocity]
+
+# Initial Estimate Covariance
+init_P = [
+    [1.0, 0.0],
+    [0.0, 1.0]
+]
