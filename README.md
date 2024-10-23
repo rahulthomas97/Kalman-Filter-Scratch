@@ -1,6 +1,6 @@
 # Kalman-Filter-Scratch
 
-Sandbox to implement Kalman Filters from scratch in C++/Python.
+Sandbox to implement Kalman Filter Projects from scratch in C++/Python.
 
 ## Getting Started
 
