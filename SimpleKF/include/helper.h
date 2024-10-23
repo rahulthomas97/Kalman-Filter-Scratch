@@ -1,6 +1,8 @@
 #pragma once
 #include <eigen3/Eigen/Dense>
-#include <toml.hpp>
+#include <toml11/parser.hpp>
+#include <toml11/find.hpp>
+
 using matd = Eigen::MatrixXd;
 using vecd = Eigen::VectorXd;
 class TomlParser

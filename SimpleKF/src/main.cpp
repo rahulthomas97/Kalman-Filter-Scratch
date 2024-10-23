@@ -12,11 +12,12 @@ int main()
 {
     TomlParser parser(CONFIG_DIR + std::string("/constAcc.toml"));
     double dt = parser.getValFromToml<double>("dt");
+    cout<<dt<<endl;
 
     KalmanFilter kf(parser);
 
     std::vector<double> t, real_x;
-    for (size_t i = 0; i <= 100; i += dt) {
+    for (double i = 0; i <= 100; i += dt) {
         t.push_back(i);
         // Real values: real_x = 0.1 * ((t**2) - t)
         real_x.push_back(0.1 * (pow(i, 2) - i));
